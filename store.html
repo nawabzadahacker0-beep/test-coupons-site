@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Store Coupons & Deals - Keep Details</title>
+<meta id="metaDescription" name="description" content="Get best coupons and deals at Keepdetails">
+<meta id="metaKeywords" name="keywords" content="coupons, promo codes, Keepdetails">
+<meta name="robots" content="index, follow">
+<meta name="author" content="KeepDetails">
+<link id="canonicalLink" rel="canonical" href="">
+<meta property="og:type" content="website">
+<meta id="ogTitle" property="og:title" content="Store Coupons">
+<meta id="ogDescription" property="og:description" content="Best coupons">
+<meta id="ogImage" property="og:image" content="">
+<meta id="ogUrl" property="og:url" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta id="twitterTitle" name="twitter:title" content="Store Coupons">
+<meta id="twitterDesc" name="twitter:description" content="Best coupons">
+<meta id="twitterImage" name="twitter:image" content="">
+<script id="schemaStore" type="application/ld+json"></script>
+<script id="schemaFAQ" type="application/ld+json"></script>
+<script id="schemaBreadcrumb" type="application/ld+json"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+<script src="/js/firebase-config.js"></script>
+<script src="/js/app.js"></script>
+<style>.clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.clamp-open{display:block}</style>
+</head><body class="bg-[#f7f9fc] min-h-screen flex flex-col">
+<header class="bg-white border-b sticky top-0 z-40"><div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center"><a href="/" class="font-extrabold text-xl text-[#1d3266]"><span class="bg-[#00c98b] text-white px-2 rounded">FREE</span> COUPON🦅</a><nav class="flex gap-3 md:gap-6 text-[11px] md:text-[13px] font-bold uppercase"><a href="/coupons">Coupons</a><a href="/stores">Stores</a><a href="/categories">Categories</a><a href="/blog">Blog</a><a href="/about">About</a></nav></div></header>
+<main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2">
+<div id="storeHeader"></div>
+<div class="bg-white border rounded-xl p-5 mb-6">
+<h2 class="font-bold text-[#1d3266] mb-2">About This Store</h2>
+<p id="storeLongDesc" class="text-sm text-gray-600 leading-relaxed clamp-2">Loading description...</p>
+<button id="readMoreBtn" onclick="toggleReadMore()" class="hidden mt-3 text-[#3258b3] text-xs font-bold border border-[#3258b3] px-3 py-1 rounded-full">Read More <i class="fa-solid fa-chevron-down ml-1"></i></button>
+</div>
+<h2 id="storeTitle" class="text-2xl font-extrabold capitalize mb-4 text-[#1d3266]">Loading...</h2>
+<div id="couponsContainer" class="space-y-3"></div>
+<div id="faqWrapper" class="bg-white border rounded-xl p-5 mt-8 hidden"><h2 class="font-extrabold text-lg text-[#1d3266] mb-4"><i class="fa-solid fa-circle-question text-[#00c98b] mr-2"></i>Frequently Asked Questions</h2><div id="faqContainer" class="space-y-3"></div></div>
+<div id="storesGrid" class="hidden"></div>
+</div>
+<div class="lg:col-span-1 space-y-6">
+<div id="aboutStoreBox" class="bg-white border rounded-xl p-5 shadow-sm"><h3 class="font-bold text-[#1d3266] mb-3"><i class="fa-solid fa-store text-[#00c98b] mr-2"></i>About Store</h3><img id="aboutStoreImg" src="https://via.placeholder.com/100" class="h-20 w-20 object-contain border rounded-lg p-2 mb-3 bg-white"><h4 id="aboutStoreName" class="font-bold text-sm text-[#1d3266]">Store Name</h4><p id="aboutStoreText" class="text-xs text-gray-500 mt-2 leading-relaxed">About store info...</p><a id="aboutStoreLink" href="#" target="_blank" class="mt-4 block text-center bg-[#1d3266] text-white text-xs font-bold py-2.5 rounded-lg">Visit Store</a></div>
+<div class="bg-white border rounded-xl p-5"><h3 class="font-bold text-sm text-[#1d3266] mb-3">Why Choose Us?</h3><ul class="text-xs text-gray-500 space-y-2"><li><i class="fa-solid fa-check text-[#00c98b] mr-1"></i> 100% Verified</li><li><i class="fa-solid fa-check text-[#00c98b] mr-1"></i> Daily Updates</li><li><i class="fa-solid fa-check text-[#00c98b] mr-1"></i> Free to Use</li></ul></div>
+</div>
+</main>
+<footer class="bg-[#0b1329] text-gray-400 mt-16"><div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm"><div><h4 class="text-white font-bold mb-3">About</h4><p>Best coupons.</p></div><div><h4 class="text-white font-bold mb-3">Quick Links</h4><div class="space-y-2"><a href="/coupons" class="block hover:text-white">All Coupons</a><a href="/stores" class="block hover:text-white">All Stores</a></div></div><div><h4 class="text-white font-bold mb-3">More</h4><div class="space-y-2"><a href="/categories" class="block hover:text-white">Categories</a><a href="/blog" class="block hover:text-white">Blog</a></div></div></div><div class="border-t border-gray-800 py-4 text-center text-xs">© 2026 KeepDetails</div></footer>
+<div id="couponModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4"><div class="bg-white rounded-2xl max-w-md w-full p-6 relative text-center"><button id="closeModal" class="absolute top-3 right-4"><i class="fa-solid fa-xmark"></i></button><h3 id="modalTitle" class="font-bold"></h3><p id="modalDesc" class="text-xs text-gray-500 mb-4"></p><div id="modalCodeBox" class="border-2 border-dashed rounded-xl p-3 flex justify-between mb-4 bg-blue-50"><span id="modalCode" class="font-bold"></span><button id="copyBtn" class="bg-[#3258b3] text-white px-4 py-2 rounded text-xs">COPY</button></div><a id="storeRedirectLink" target="_blank" class="block bg-[#00c98b] text-white py-2.5 rounded font-bold">Open Deal</a></div></div>
+</body></html>
