@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/store/:slug", "destination": "/store.html" },
+    { "source": "/category/:slug", "destination": "/category.html" },
+    { "source": "/stores", "destination": "/stores.html" },
+    { "source": "/coupons", "destination": "/coupons.html" },
+    { "source": "/categories", "destination": "/categories.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/blog", "destination": "/blog.html" }
+  ]
+}
